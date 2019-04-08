@@ -1,0 +1,37 @@
+{
+  "name": "sistemadiprenotazione",
+  "version": "1.0.0",
+  "description": "Gestire le prenotazioni per una serie di eventi.per ogni evento ci saranno un numero di partecipanti variabile e deciso al momento della creazione dell'evento.chi ha inserito l'evento deve poter vedere l'elenco degli iscritti e ogni iscritto deve vedere gli eventi disponibili.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemixHeart/SistemaDiPrenotazione.git"
+  },
+  "author": "remixheart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RemixHeart/SistemaDiPrenotazione/issues"
+  },
+  "homepage": "https://github.com/RemixHeart/SistemaDiPrenotazione#readme",
+  "dependencies": {
+    "async": "^2.6.2",
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.3",
+    "http-errors": "^1.7.2",
+    "mongoose": "^5.5.0",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport.socketio": "^3.7.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.2.0"
+  }
+}
