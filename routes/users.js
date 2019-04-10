@@ -44,6 +44,7 @@ router.route('/login')
     failureFlash: true
   }));
 
+//LOGOUT
 router.get('/logout', (req, res, next) => {
   req.logout();
   res.redirect('/');
