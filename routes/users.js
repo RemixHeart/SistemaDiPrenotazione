@@ -4,7 +4,6 @@ var User = require('../models/user');
 var passport = require('passport');
 var passportConfig = require('../config/passport');
 
-
 //SIGNUP
 router.route('/signup')
   .get((req, res, next) => {
@@ -29,7 +28,6 @@ router.route('/signup')
             res.redirect('/');
           })
         });
-
       }
     });
   });
