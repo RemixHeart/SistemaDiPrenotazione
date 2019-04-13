@@ -2,18 +2,18 @@ var express = require('express');
 var async = require('async');
 var router = express.Router();
 var User = require('../models/user');
-var Tweet = require('../models/tweet');
+var Booking = require('../models/booking');
 /* GET home page. */
 router.get('/', (req, res, next) => {
   if(req.user) {
 
-    Tweet.find({})
+    Booking.find({})
       .sort('-created')
       .populate('owner') //fill owner attributes
-      .exec((err, tweets) => { //pass all the tweets the user has got
+      .exec((err, bookings) => { //pass all the Bookings the user has got
         if (err) return next(err);
-        console.log(tweets);
-        res.render('main/home', { tweets: tweets});
+        console.log(bookings);
+        res.render('main/home', { bookings: bookings});
       });
   }
   else res.render('main/index', { title: 'Express' });
@@ -22,13 +22,13 @@ router.get('/', (req, res, next) => {
 router.get('/user/:id', (req, res, next) =>{
   async.waterfall([
     function(callback) {
-      Tweet.find({ owner: req.params.id}) //find all tweets that belong to the user
+      Booking.find({ owner: req.params.id}) //find all Bookings that belong to the user
         .populate('owner')
-        .exec(function(err, tweets) {
-          callback(err, tweets)
+        .exec(function(err, bookings) {
+          callback(err, bookings)
         });
     },
-    function(tweets, callback) {
+    function(bookings, callback) {
       User.findOne({ _id: req.params.id })
         .populate('following')
         .populate('followers')
@@ -44,7 +44,7 @@ router.get('/user/:id', (req, res, next) =>{
             currentUser = false;
           }
           res.render('main/user', { foundUser: user,
-             tweets: tweets,
+             bookings: bookings,
              currentUser: currentUser,
              follower: follower});
         });
