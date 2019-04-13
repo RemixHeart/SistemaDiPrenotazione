@@ -1,5 +1,5 @@
 const async = require('async');
-const Tweet = require('../models/tweet');
+const Booking = require('../models/booking');
 const User = require('../models/user');
 
 module.exports = function(io) {
@@ -10,32 +10,32 @@ module.exports = function(io) {
     console.log(user.name);
 
 
-    socket.on('tweet', (data) => {
+    socket.on('Booking', (data) => {
       console.log(data);
       async.parallel([
         function(callback) {
-          io.emit('incomingTweets', { data, user });
+          io.emit('incomingBookings', { data, user });
         },
 
         function(callback) {
           async.waterfall([
             function(callback) {
-              var tweet = new Tweet();
-              tweet.content = data.content;
-              tweet.owner = user._id;
-              tweet.save(function(err) {
-                callback(err, tweet);
+              var booking = new Booking();
+              booking.content = data.content;
+              booking.owner = user._id;
+              booking.save(function(err) {
+                callback(err, booking);
               })
 
             },
 
-            function(tweet, callback) {
+            function(booking, callback) {
               User.update(
                 {
                   _id: user._id
                 },
                 {
-                  $push: { tweets: { tweet: tweet._id }},
+                  $push: { bookings: { booking: booking._id }},
 
                 }, function(err, count) {
                   callback(err, count);// end of the code
