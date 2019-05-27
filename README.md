@@ -1,6 +1,6 @@
 # SistemaDiPrenotazione
 
-Go to WIKI
+# Go to WIKI
 
 
 FORUM: https://discord.gg/qFM7Kvc
