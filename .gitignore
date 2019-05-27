@@ -1,8 +1,0 @@
-# ENV file with private keys
-.env
-
-# NPM dependencies
-node_modules
-
-# DB file
-db.json
