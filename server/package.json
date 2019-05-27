@@ -1,0 +1,39 @@
+{
+  "name": "sistemadiprenotazione-backend",
+  "version": "1.0.0",
+  "description": "Gestire le prenotazioni per una serie di eventi.per ogni evento ci saranno un numero di partecipanti variabile e deciso al momento della creazione dell'evento.chi ha inserito l'evento deve poter vedere l'elenco degli iscritti e ogni iscritto deve vedere gli eventi disponibili.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acerbisgianluca/SistemaDiPrenotazione.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Acerbis Gianluca, Claudio Metelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acerbisgianluca/SistemaDiPrenotazione/issues"
+  },
+  "homepage": "https://github.com/acerbisgianluca/SistemaDiPrenotazione#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "cryptr": "^4.0.2",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "helmet": "^3.16.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0",
+    "morgan": "^1.9.1",
+    "shortid": "^2.2.14",
+    "multer": "1.4.1"
+  }
+}
