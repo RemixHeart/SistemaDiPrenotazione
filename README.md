@@ -15,6 +15,6 @@ Gestire le prenotazioni per una serie di eventi.per ogni evento ci saranno un nu
 * Mattia Cherubini 
 * Sery Franck Dorgeles (****Project Manager****)
 
-
+Per vedere l'app live cliccare qui https://repl.it/@franckdorgeless/sp-Frontend
 
 FORUM: https://discord.gg/qFM7Kvc
